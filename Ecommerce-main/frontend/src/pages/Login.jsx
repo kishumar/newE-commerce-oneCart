@@ -134,7 +134,7 @@ const Login = () => {
 
             {!showPassword && (
               <IoEyeOutline
-                className="w-[20px] h-[20px] cursor-pointer absolute bottom-[36%] right-[5%]"
+                className="w-[20px] h-[20px] cursor-pointer  absolute bottom-[60%] right-[5%]"
                 onClick={() => setShowPassword((prev) => !prev)}
               />
             )}

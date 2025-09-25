@@ -33,7 +33,7 @@ const [loading , setLoading] = useState(false)
     <div className='w-[100vw] h-[70px] bg-[#dcdbdbf8] z-10 fixed top-0 flex items-center justify-between px-[30px] overflow-x-hidden shadow-md shadow-black'>
       <div className='w-[30%] flex items-center justify-start gap-[10px] cursor-pointer' onClick={()=> navigate("/")}>
         <img className='w-[30px] ' src={logo} alt="" />
-        <h1 className='text-[25px] text-[black] font-semibold'>UrbanPrime</h1>
+        <h1 className='text-[25px] text-[black] font-semibold'>OneCart Admin</h1>
 
       </div>
         <button onClick={logout} className='text-[15px] hover:bg-[2px] border-[#89daea] py-[10px] bg-[black] px-[20px] rounded-2xl cursor-pointer  text-white'>{loading ? <Loading/> : "Logout"}</button>
