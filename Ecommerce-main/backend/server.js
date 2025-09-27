@@ -15,7 +15,7 @@ const app=express()
 connectDB();
 
 app.use(cors({
-    origin:["http://localhost:5173" ,"http://localhost:5174"],
+    origin:["http://localhost:5173" ,"http://localhost:5174", "https://new-e-commerce-one-cart-p3uh.vercel.app","https://new-e-commerce-one-cart.vercel.app"],
     credentials:true,
 }))
 app.use(cookieParser())
