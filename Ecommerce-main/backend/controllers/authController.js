@@ -35,8 +35,8 @@ export const register = async(req, res)=>{
         const token = await genToken(user._id);
            res.cookie("token", token, {
             httpOnly: true,
-            secure:false,
-            sameSite: "strict",
+            secure:true,
+            sameSite: "none",
             maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
         });
         console.log("User registered successfully:", user);
@@ -71,8 +71,8 @@ export const login = async (req, res) => {
      const token = await genToken(user._id);
            res.cookie("token", token, {
             httpOnly: true,
-            secure:false,
-            sameSite: "strict",
+            secure:true,
+            sameSite: "none",
             maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
         });
    
@@ -89,8 +89,8 @@ export const logout = async (req,res)=>{
     try {
        res.clearCookie("token", {
   httpOnly: true,
-  secure: false,
-  sameSite: "Strict"
+  secure: true,
+  sameSite: "none"
 });
         return res.json({success:true, message:"User Logout"})
     } catch (error) {
@@ -113,8 +113,8 @@ try {
         
         res.cookie("token",token, {
             httpOnly:true,
-            secure:false,
-            sameSite:"Strict",
+            secure:true,
+            sameSite:"none",
             maxAge:   7*24*60*60*1000
         });
 
@@ -134,8 +134,8 @@ export const adminLogin = async(req,res) => {
     let  token = await genToken1(email);     
         res.cookie("token",token, {
             httpOnly:true,
-            secure:false,
-            sameSite:"Strict",
+            secure:true,
+            sameSite:"none",
             maxAge:   7*24*60*60*1000
         });
         return res.status(200).json(token)
